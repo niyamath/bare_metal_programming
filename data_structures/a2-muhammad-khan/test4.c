@@ -1,0 +1,41 @@
+#include "header4.h"
+#include <stddef.h>
+#include <stdlib.h>
+
+
+/*  TODO:  For this problem, build a function called 'ihy' that takes two pointers to 'struct gnc's.  These pointers represent the first node in a linked list and they can be null if the list is empty.  The function should determine which linked list is the longer one, and return the pointer to the start of that list.  If they are both the same length, return the first one.
+Check the header file to find out what the structure definition and function prototype looks like.
+*/
+	
+
+struct gnc * ihy(struct gnc *q, struct gnc *w)
+{
+double a=0;
+double b=0;
+ struct gnc *node1=q;
+
+while(node1!=NULL)
+{
+a++;
+node1=node1->next_gnc;
+}
+ struct gnc *node2=w;
+while(node2!=NULL)
+{
+b++;
+node2=node2->next_gnc;
+}
+
+if(a>=b)
+{
+return q;
+}
+
+else
+return w;
+
+
+
+
+
+}
